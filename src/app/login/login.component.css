@@ -1,0 +1,41 @@
+/* Center the form vertically and horizontally */
+.container {
+    /* height: 100%; */
+  }
+
+  .login-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-section{
+    height: 100%;
+    width: 60%;
+    border: 2px solid;
+  }
+
+  .right-section{
+    height: 100%;
+    width: 40%;
+    border: 2px solid red;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    /* padding: 2rem; */
+  }
+  
+  /* Style for invalid fields */
+  .is-invalid {
+    border-color: #dc3545;
+  }
+  
+  .invalid-feedback {
+    display: block;
+  }
+  

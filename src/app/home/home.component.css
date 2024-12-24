@@ -8,14 +8,15 @@ Banner Style
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding: 226px 0px 120px 0px;
+    padding: 15rem 0px 13rem 0px;
     /* position: relative; */
     /* overflow: hidden; */
   }
   
   .main-banner:after {
     content: '';
-    background-image: url(../../assets/images/slider-left-dec.jpg);
+    /* /assets/images/slider-right-dec.jpg */
+    background-image: url('../../assets/images/slider-left-dec.jpg');
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
@@ -27,7 +28,7 @@ Banner Style
   
   .main-banner:before {
     content: '';
-    background-image: url(../../assets/images/slider-right-dec.jpg);
+    background-image: url('../../assets/images/slider-right-dec.jpg');
     background-repeat: no-repeat;
     position: absolute;
     right: 0;

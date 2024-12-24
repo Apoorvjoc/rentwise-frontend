@@ -1,5 +1,74 @@
 <div class="login-container">
-    <h3>Login</h3>
-    <div class="left-section"></div>
-    <div class="right-section"></div>
+    <!-- <h3>Login</h3> -->
+    <div class="left-section">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="..." class="d-block w-100" alt="img1">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="..." class="d-block w-100" alt="img2">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="img3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+    <div class="right-section">
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+              <div class="">
+                <div class="card">
+                  <div class="card-body">
+                    <h3 class="text-center">Login</h3>
+          
+                    <!-- Reactive Form -->
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                      <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input
+                          id="username"
+                          type="text"
+                          class="form-control"
+                          formControlName="username"
+                          [ngClass]="{'is-invalid': f['username'].touched && f['username'].invalid}"
+                        />
+                        <div *ngIf="f['username'].touched && f['username'].invalid" class="invalid-feedback">
+                          <div *ngIf="f['username'].errors?.['required']">Username is required.</div>
+                          <div *ngIf="f['username'].errors?.['minlength']">Username must be at least 3 characters long.</div>
+                        </div>
+                      </div>
+          
+                      <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input
+                          id="password"
+                          type="password"
+                          class="form-control"
+                          formControlName="password"
+                          [ngClass]="{'is-invalid': f['password'].touched && f['password'].invalid}"
+                        />
+                        <div *ngIf="f['password'].touched && f['password'].invalid" class="invalid-feedback">
+                          <div *ngIf="f['password'].errors?.['required']">Password is required.</div>
+                          <div *ngIf="f['password'].errors?.['minlength']">Password must be at least 6 characters long.</div>
+                        </div>
+                      </div>
+          
+                      <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Login</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div> 
+    </div>
 </div>
